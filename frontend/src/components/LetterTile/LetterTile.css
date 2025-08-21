@@ -1,0 +1,10 @@
+.letterTile {
+  color: #eeeeee;
+  background-color: #333333;
+  border-radius: 1rem;
+  font-size: 3rem;
+  padding: 2rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
