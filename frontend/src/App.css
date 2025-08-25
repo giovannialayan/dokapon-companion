@@ -5,9 +5,21 @@
   text-align: center;
 }
 
-.wordList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+button {
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #eee;
+  border-style: solid;
+  border-color: #303030;
+}
+
+.greenActive:active {
+  background-color: #272;
+  border-color: #207020;
+  padding: 1rem;
+  margin: 0.3rem;
+  font-size: 1.3rem;
 }

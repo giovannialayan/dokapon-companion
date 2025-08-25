@@ -1,0 +1,26 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.navCurrent {
+  margin-top: 2rem;
+}
+
+.navSelected {
+  border-color: #227;
+  background-color: #337;
+}
+
+.navButton:hover {
+  color: #aaf;
+}

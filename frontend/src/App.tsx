@@ -1,16 +1,33 @@
+import { useState } from 'react';
 import './App.css';
-import WordTile from './components/WordTile/WordTile';
+import Jobcounter from './components/JobCounter/JobCounter';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
-  const startWord = 'word';
-  const targetword = 'free';
+  const [currentTool, setCurrentTool] = useState(-1);
+  const [currentToolString, setCurrentToolString] = useState('');
+
+  const ChangeTool = async (tool: string, id: number) => {
+    if (currentTool == id) {
+      return;
+    }
+
+    const response = await fetch(tool);
+    const responseJson = await response.json();
+
+    if (response.ok) {
+      setCurrentTool(responseJson.tool);
+      setCurrentToolString(responseJson.name);
+    } else {
+      //show error
+      console.log(responseJson);
+    }
+  };
 
   return (
     <>
-      <div className='wordList'>
-        <WordTile>{startWord}</WordTile>
-        <WordTile>{targetword}</WordTile>
-      </div>
+      <NavBar current={currentTool} currentString={currentToolString} onChangeTool={ChangeTool}></NavBar>
+      {currentTool == 0 && <Jobcounter></Jobcounter>}
     </>
   );
 }

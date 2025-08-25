@@ -1,0 +1,7 @@
+.jobPointsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
