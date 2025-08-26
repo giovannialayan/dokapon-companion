@@ -13,4 +13,6 @@ async def get_tool(toolId: str):
     match toolId:
         case "jobcounter":
             return {"tool": 0, "name": "job counter"}
+        case "xpcounter":
+            return {"tool": 1, "name": "xp counter"}
     return {"tool": -1, "name": "not found"}
