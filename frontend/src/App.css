@@ -16,10 +16,9 @@ button {
   border-color: #303030;
 }
 
-.greenActive:active {
+button:active {
   background-color: #272;
   border-color: #207020;
-  padding: 1rem;
   margin: 0.3rem;
   font-size: 1.3rem;
 }

@@ -18,9 +18,7 @@ function Jobcounter() {
     <div>
       <div className='jobPointsContainer'>
         <p>job points: {jobPoints}/7</p>
-        <button className='greenActive' onClick={incrementPoints}>
-          +1
-        </button>
+        <button onClick={incrementPoints}>+1</button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-from fastapi  import FastAPI
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(title="page")
@@ -15,4 +15,6 @@ async def get_tool(toolId: str):
             return {"tool": 0, "name": "job counter"}
         case "xpcounter":
             return {"tool": 1, "name": "xp counter"}
+        case "battlecalc":
+            return {"tool": 2, "name": "battle calculator"}
     return {"tool": -1, "name": "not found"}

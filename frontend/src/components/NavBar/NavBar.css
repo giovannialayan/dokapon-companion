@@ -24,3 +24,10 @@
 .navButton:hover {
   color: #aaf;
 }
+
+.navButton:active {
+  background-color: #447;
+  border-color: #337;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
