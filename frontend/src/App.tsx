@@ -17,9 +17,9 @@ function App() {
   return (
     <>
       <NavBar current={currentTool} currentString={currentToolString} onChangeTool={ChangeTool}></NavBar>
-      {currentTool == 0 && <Jobcounter></Jobcounter>}
-      {currentTool == 1 && <XpCounter></XpCounter>}
-      {currentTool == 2 && <BattleCalculator></BattleCalculator>}
+      <Jobcounter hide={currentTool != 0}></Jobcounter>
+      <XpCounter hide={currentTool != 1}></XpCounter>
+      <BattleCalculator hide={currentTool != 2}></BattleCalculator>
     </>
   );
 }

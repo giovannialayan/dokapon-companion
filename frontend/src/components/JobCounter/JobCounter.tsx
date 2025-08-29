@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import './JobCounter.css';
 
-function Jobcounter() {
+interface Props {
+  hide: boolean;
+}
+
+function Jobcounter({ hide }: Props) {
   const [jobPoints, setJobPoints] = useState(0);
 
   const incrementPoints = () => {
@@ -15,7 +19,7 @@ function Jobcounter() {
   };
 
   return (
-    <div>
+    <div className={hide ? 'hide' : ''}>
       <div className='jobPointsContainer'>
         <p>job points: {jobPoints}/7</p>
         <button onClick={incrementPoints}>+1</button>

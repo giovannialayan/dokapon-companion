@@ -4,7 +4,11 @@ import { CheckNumberInput } from '../../utils';
 
 //https://dokapon.fandom.com/wiki/Damage_(Kingdom)
 
-function BattleCalculator() {
+interface Props {
+  hide: boolean;
+}
+
+function BattleCalculator({ hide }: Props) {
   const [playerAttack, setPlayerAttack] = useState(0);
   const [playerDefense, setPlayerDefense] = useState(0);
   const [playerMagic, setPlayerMagic] = useState(0);
@@ -57,7 +61,7 @@ function BattleCalculator() {
   };
 
   return (
-    <div className='battleCalcContainer'>
+    <div className={'battleCalcContainer' + (hide ? ' hide' : '')}>
       <div>
         <p>your stats</p>
         <StatsInput

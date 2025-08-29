@@ -4,7 +4,11 @@ import { CheckNumberInput } from '../../utils';
 
 //https://dokapon.fandom.com/wiki/Level_Up?utm_source=chatgpt.com#Dokapon_Kingdom
 
-function XpCounter() {
+interface Props {
+  hide: boolean;
+}
+
+function XpCounter({ hide }: Props) {
   const [level, setLevel] = useState(1);
   const [xpUntilLevel, setXpuntilLevel] = useState(8);
   const [xpInput, setXpInput] = useState(0);
@@ -18,7 +22,7 @@ function XpCounter() {
 
     while (totalXp.current >= targetXp.current) {
       newLevel++;
-      targetXp.current = Math.pow(level + 1, 3);
+      targetXp.current = Math.pow(newLevel + 1, 3);
     }
 
     if (newLevel != level) {
@@ -29,7 +33,7 @@ function XpCounter() {
   };
 
   return (
-    <div>
+    <div className={hide ? 'hide' : ''}>
       <div>
         <p>level: {level}</p>
         <p>{xpUntilLevel} xp until next level</p>
