@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './BattleCalculator.css';
-import { CheckNumberInput } from '../../Utils';
+import { CheckNumberInput } from '../../utils';
 
 //https://dokapon.fandom.com/wiki/Damage_(Kingdom)
 
@@ -22,9 +22,9 @@ function BattleCalculator() {
     return Math.round((attackerAt * 2.8 - defenderDf * 1.2) * guard * (proficiency ? 1.3 : 1) * random);
   };
 
-  const getMagicDamage = (attackerMg: number, defenderMg: number, offensePower: number, defensePower: number, guard: number, random: number) => {
-    return Math.round((attackerMg * 2.4 - defenderMg) * offensePower * (1 - defensePower) * guard * random);
-  };
+  // const getMagicDamage = (attackerMg: number, defenderMg: number, offensePower: number, defensePower: number, guard: number, random: number) => {
+  //   return Math.round((attackerMg * 2.4 - defenderMg) * offensePower * (1 - defensePower) * guard * random);
+  // };
 
   const getStrikeDamage = (
     attackerAt: number,

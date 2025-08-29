@@ -7,5 +7,12 @@ export default defineConfig({
   build: {
     outDir: '../static',
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/dokacom-[hash].js',
+        chunkFileNames: 'assets/dokacom-[hash].js',
+        assetFileNames: 'assets/dokacom-[hash][extname]',
+      },
+    },
   },
 });

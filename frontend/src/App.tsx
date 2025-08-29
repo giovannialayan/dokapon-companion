@@ -9,21 +9,9 @@ function App() {
   const [currentTool, setCurrentTool] = useState(-1);
   const [currentToolString, setCurrentToolString] = useState('');
 
-  const ChangeTool = async (tool: string, id: number) => {
-    if (currentTool == id) {
-      return;
-    }
-
-    const response = await fetch(tool);
-    const responseJson = await response.json();
-
-    if (response.ok) {
-      setCurrentTool(responseJson.tool);
-      setCurrentToolString(responseJson.name);
-    } else {
-      //show error
-      console.log(responseJson);
-    }
+  const ChangeTool = async (tool: number, name: string) => {
+    setCurrentTool(tool);
+    setCurrentToolString(name);
   };
 
   return (

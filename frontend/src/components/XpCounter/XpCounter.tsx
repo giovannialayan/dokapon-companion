@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import './XpCounter.css';
-import { CheckNumberInput } from '../../Utils';
+import { CheckNumberInput } from '../../utils';
 
 //https://dokapon.fandom.com/wiki/Level_Up?utm_source=chatgpt.com#Dokapon_Kingdom
 
@@ -14,10 +14,15 @@ function XpCounter() {
 
   const addXp = () => {
     totalXp.current += xpInput;
-    console.log(totalXp.current, targetXp.current);
-    if (totalXp.current >= targetXp.current) {
-      setLevel(level + 1);
-      targetXp.current = Math.pow(level + 2, 3);
+    let newLevel = level;
+
+    while (totalXp.current >= targetXp.current) {
+      newLevel++;
+      targetXp.current = Math.pow(level + 1, 3);
+    }
+
+    if (newLevel != level) {
+      setLevel(newLevel);
     }
 
     setXpuntilLevel(targetXp.current - totalXp.current);

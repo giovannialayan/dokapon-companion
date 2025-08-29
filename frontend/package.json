@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build-watch": "vite build --mode development --watch",
+    "build-alt": "tsc -b && vite build && npx copyfiles -u 2 \"../static/*\" \"../../oiggames/wwwroot/dokapon-companion\" && npx copyfiles -u 2 \"../static/assets/*\" \"../../oiggames/wwwroot\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
