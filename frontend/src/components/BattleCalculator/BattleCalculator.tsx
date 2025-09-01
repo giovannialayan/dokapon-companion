@@ -8,6 +8,57 @@ interface Props {
   hide: boolean;
 }
 
+const offenseMagicDict: { [key: string]: number } = {
+  scorch: 1.95,
+  sorcher: 2.65,
+  gigablaze: 3.7,
+  zap: 2.25,
+  zapper: 3.15,
+  lectrobeam: 4.45,
+  chill: 2.1,
+  chiller: 2.9,
+  icebarrage: 4.1,
+  gust: 2.45,
+  guster: 3.2,
+  f5storm: 4.75,
+  mirrorimage: 2.4,
+  teleport: 3,
+  aurora: 5,
+  curse: 1.6,
+  sleepy: 1.1,
+  blind: 1.4,
+  banish: 2.5,
+  drain: 0,
+  swap: 0,
+  pickpocket: 1.5,
+  rust: 3.6,
+};
+
+const defenseMagicDict: { [key: string]: number } = {
+  mguard: 0.2,
+  'mguard+': 0.6,
+  mguardplus: 0.6,
+  mguarddx: 0.9,
+  refresh: 0.2,
+  'refresh+': 0.35,
+  refreshplus: 0.35,
+  refreshdx: 0.5,
+  supercure: 0.5,
+  sealmagic: 0.3,
+  'sealmagic+': 0.5,
+  sealmagicplus: 0.5,
+  shock: 0.6,
+  mirror: 0.5,
+  mgcharge: 0.35,
+  atcharge: 0.35,
+  dfcharge: 0.35,
+  spcharge: 0.35,
+  chargeall: 0.6,
+  charm: 0.7,
+  bounce: 0,
+  superbounce: 0,
+};
+
 function BattleCalculator({ hide }: Props) {
   const [playerAttack, setPlayerAttack] = useState(0);
   const [playerDefense, setPlayerDefense] = useState(0);
@@ -15,20 +66,35 @@ function BattleCalculator({ hide }: Props) {
   const [playerSpeed, setPlayerSpeed] = useState(0);
   const [playerHealth, setPlayerHealth] = useState(0);
   const [playerProficiency, setPlayerProficiency] = useState(false);
+  const [playerOffenseMagic, setPlayerOffenseMagic] = useState('');
+  const [playerDefenseMagic, setPlayerDefenseMagic] = useState('');
   const [enemyAttack, setEnemyAttack] = useState(0);
   const [enemyDefense, setEnemyDefense] = useState(0);
   const [enemyMagic, setEnemyMagic] = useState(0);
   const [enemySpeed, setEnemySpeed] = useState(0);
   const [enemyHealth, setEnemyHealth] = useState(0);
   const [enemyProficiency, setEnemyProficiency] = useState(false);
+  const [enemyOffenseMagic, setEnemyOffenseMagic] = useState('');
+  const [enemyDefenseMagic, setEnemyDefenseMagic] = useState('');
 
   const getAttackDamage = (attackerAt: number, defenderDf: number, guard: number, proficiency: boolean, random: number) => {
     return Math.round((attackerAt * 2.8 - defenderDf * 1.2) * guard * (proficiency ? 1.3 : 1) * random);
   };
 
-  // const getMagicDamage = (attackerMg: number, defenderMg: number, offensePower: number, defensePower: number, guard: number, random: number) => {
-  //   return Math.round((attackerMg * 2.4 - defenderMg) * offensePower * (1 - defensePower) * guard * random);
-  // };
+  const getMagicDamage = (attackerMg: number, defenderMg: number, offenseMagic: string, defenseMagic: string, guard: number, random: number) => {
+    let offensePower = 0;
+    let defensePower = 0;
+
+    if (offenseMagicDict.hasOwnProperty(offenseMagic)) {
+      offensePower = offenseMagicDict[offenseMagic];
+    }
+
+    if (defenseMagicDict.hasOwnProperty(defenseMagic)) {
+      defensePower = defenseMagicDict[defenseMagic];
+    }
+
+    return Math.round((attackerMg * 2.4 - defenderMg) * offensePower * (1 - defensePower) * guard * random);
+  };
 
   const getStrikeDamage = (
     attackerAt: number,
@@ -71,12 +137,16 @@ function BattleCalculator({ hide }: Props) {
           speed={playerSpeed}
           health={playerHealth}
           proficiency={playerProficiency}
+          offenseMagic={playerOffenseMagic}
+          defenseMagic={playerDefenseMagic}
           setAttack={setPlayerAttack}
           setDefense={setPlayerDefense}
           setMagic={setPlayerMagic}
           setSpeed={setPlayerSpeed}
           setHealth={setPlayerHealth}
           setProficiency={setPlayerProficiency}
+          setOffenseMagic={setPlayerOffenseMagic}
+          setDefenseMagic={setPlayerDefenseMagic}
         ></StatsInput>
       </div>
       <div>
@@ -88,12 +158,16 @@ function BattleCalculator({ hide }: Props) {
           speed={enemySpeed}
           health={enemyHealth}
           proficiency={enemyProficiency}
+          offenseMagic={enemyOffenseMagic}
+          defenseMagic={enemyDefenseMagic}
           setAttack={setEnemyAttack}
           setDefense={setEnemyDefense}
           setMagic={setEnemyMagic}
           setSpeed={setEnemySpeed}
           setHealth={setEnemyHealth}
           setProficiency={setEnemyProficiency}
+          setOffenseMagic={setEnemyOffenseMagic}
+          setDefenseMagic={setEnemyDefenseMagic}
         ></StatsInput>
       </div>
       <div>
@@ -121,7 +195,19 @@ function BattleCalculator({ hide }: Props) {
         </p>
         <p>
           you strike vs they counter: {getCounterDamage(playerAttack, playerDefense, enemyAttack, enemyMagic, enemySpeed, enemyProficiency, 0.95)} or{' '}
-          {getCounterDamage(playerAttack, playerDefense, enemyAttack, enemyMagic, enemySpeed, enemyProficiency, 0.95)}
+          {getCounterDamage(playerAttack, playerDefense, enemyAttack, enemyMagic, enemySpeed, enemyProficiency, 1.05)}
+        </p>
+        <p>
+          you use magic vs they defend: {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1.4, 0.95)} or{' '}
+          {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1.4, 1.05)}
+        </p>
+        <p>
+          you use magic vs they magic defend: {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1, 0.95)} or{' '}
+          {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1, 1.05)}
+        </p>
+        <p>
+          you use magic vs they counter: {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1.8, 0.95)} or{' '}
+          {getMagicDamage(playerMagic, enemyMagic, playerOffenseMagic, enemyDefenseMagic, 1.8, 1.05)}
         </p>
       </div>
       <div>
@@ -149,7 +235,19 @@ function BattleCalculator({ hide }: Props) {
         </p>
         <p>
           they strike vs you counter: {getCounterDamage(enemyAttack, enemyDefense, playerAttack, playerMagic, playerSpeed, playerProficiency, 0.95)}{' '}
-          or {getCounterDamage(enemyAttack, enemyDefense, playerAttack, playerMagic, playerSpeed, playerProficiency, 0.95)}
+          or {getCounterDamage(enemyAttack, enemyDefense, playerAttack, playerMagic, playerSpeed, playerProficiency, 1.05)}
+        </p>
+        <p>
+          they use magic vs you defend: {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1.4, 0.95)} or{' '}
+          {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1.4, 1.05)}
+        </p>
+        <p>
+          they use magic vs you magic defend: {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1, 0.95)} or{' '}
+          {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1, 1.05)}
+        </p>
+        <p>
+          they use magic vs you counter: {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1.8, 0.95)} or{' '}
+          {getMagicDamage(enemyMagic, playerMagic, enemyOffenseMagic, playerDefenseMagic, 1.8, 1.05)}
         </p>
       </div>
     </div>
@@ -165,12 +263,16 @@ interface StatsInputProps {
   speed: number;
   health: number;
   proficiency: boolean;
+  offenseMagic: string;
+  defenseMagic: string;
   setAttack: (a: number) => void;
   setDefense: (d: number) => void;
   setMagic: (m: number) => void;
   setSpeed: (s: number) => void;
   setHealth: (h: number) => void;
   setProficiency: (p: boolean) => void;
+  setOffenseMagic: (om: string) => void;
+  setDefenseMagic: (dm: string) => void;
 }
 
 function StatsInput({
@@ -180,12 +282,16 @@ function StatsInput({
   speed,
   health,
   proficiency,
+  offenseMagic,
+  defenseMagic,
   setAttack,
   setDefense,
   setMagic,
   setSpeed,
   setHealth,
   setProficiency,
+  setOffenseMagic,
+  setDefenseMagic,
 }: StatsInputProps) {
   return (
     <div>
@@ -237,6 +343,26 @@ function StatsInput({
             value={health}
             onChange={(e) => {
               CheckNumberInput(e.currentTarget.value.toString(), setHealth);
+            }}
+          ></input>
+        </div>
+        <div className='inputLabelcontainer'>
+          <p>offense magic</p>
+          <input
+            type='text'
+            value={offenseMagic}
+            onChange={(e) => {
+              setOffenseMagic(e.currentTarget.value.toString());
+            }}
+          ></input>
+        </div>
+        <div className='inputLabelcontainer'>
+          <p>offense magic</p>
+          <input
+            type='text'
+            value={defenseMagic}
+            onChange={(e) => {
+              setDefenseMagic(e.currentTarget.value.toString());
             }}
           ></input>
         </div>
