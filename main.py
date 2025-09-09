@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+from itemDict import items, weapons, shields, fieldMagics, offensiveMagics, defensiveMagics
 
 app = FastAPI(title="page")
 app_api = FastAPI(title="api")
@@ -8,13 +9,17 @@ app.mount("/tool", app_api)
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
-# @app_api.get("/{toolId}")
-# async def get_tool(toolId: str):
-#     match toolId:
-#         case "jobcounter":
-#             return {"tool": 0, "name": "job counter"}
-#         case "xpcounter":
-#             return {"tool": 1, "name": "xp counter"}
-#         case "battlecalc":
-#             return {"tool": 2, "name": "battle calculator"}
-#     return {"tool": -1, "name": "not found"}
+@app_api.get("/{itemName}")
+async def get_item(itemName: str):
+    if (itemName in items):
+        return {items[itemName]}
+    elif (itemName in weapons):
+        return {weapons[itemName]}
+    elif (itemName in shields):
+        return {shields[itemName]}
+    elif (itemName in offensiveMagics):
+        return {offensiveMagics[itemName]}
+    elif (itemName in defensiveMagics):
+        return {defensiveMagics[itemName]}
+    elif (itemName in fieldMagics):
+        return {fieldMagics[itemName]}

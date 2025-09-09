@@ -31,3 +31,13 @@
   margin: 0.5rem;
   font-size: 1rem;
 }
+
+@media (max-width: 576px) {
+  .navContainer {
+    position: relative;
+  }
+
+  .navButtons {
+    flex-wrap: wrap;
+  }
+}
