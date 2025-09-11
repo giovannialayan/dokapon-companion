@@ -1210,8 +1210,525 @@ shields = {
 }
 
 
-fieldMagics = {}
+fieldMagics = {
+  "magma": { "price": "1,600G", "power": "1.5", "locations": "Asiana, Hallstatt, Casino Cave", "target": "One player or monster", "effect": "" },
+  "magma+": {
+    "price": "3,800G",
+    "power": "2.1",
+    "locations": "Clovis, Lava Cave 3F, Daunting Mountain 1F, Aphrike",
+    "target": "One player or monster",
+    "effect": ""
+  },
+  "magma dx": {
+    "price": "17,000G",
+    "power": "4.5",
+    "locations": "Underground Passage, Tower of Rabble 2F",
+    "target": "One player or monster",
+    "effect": ""
+  },
+  "ice": {
+    "price": "1,200G",
+    "power": "1.2",
+    "locations": "Casino Cave",
+    "target": "All opposing players and monsters on chosen space",
+    "effect": ""
+  },
+  "ice+": {
+    "price": "3,000G",
+    "power": "1.8",
+    "locations": "Daunting Mountain 1F",
+    "target": "All opposing players and monsters on chosen space",
+    "effect": ""
+  },
+  "ice dx": {
+    "price": "12,000G",
+    "power": "3.6",
+    "locations": "Flinders, Tower of Rabble 2F",
+    "target": "All opposing players and monsters on chosen space",
+    "effect": ""
+  },
+  "volt": {
+    "price": "800G",
+    "power": "0.96",
+    "locations": "Hallstatt, Casino Cave, Daunting Mountain 1F",
+    "target": "All opposing players and monsters near chosen space",
+    "effect": ""
+  },
+  "volt+": {
+    "price": "2,600G",
+    "power": "1.56",
+    "locations": "Clovis, Daunting Mountain 1F",
+    "target": "All opposing players and monsters near chosen space",
+    "effect": ""
+  },
+  "volt dx": {
+    "price": "10,000G",
+    "power": "3.0",
+    "locations": "Aphrike, Underground Passage, Flinders",
+    "target": "All opposing players and monsters near chosen space",
+    "effect": ""
+  },
+  "flash bomb": { "price": "40,000G", "power": "5.0", "locations": "None", "target": "All opposing players and bosses on current map", "effect": "" },
+  "atrophy": {
+    "price": "300G",
+    "power": "",
+    "locations": "Asiana, Hallstatt, Clovis, Aphrike, Flinders",
+    "target": "One player or monster",
+    "effect": "Inflicts AT Down on the target."
+  },
+  "tenderize": {
+    "price": "280G",
+    "power": "",
+    "locations": "Asiana, Clovis",
+    "target": "One player or monster",
+    "effect": "Inflicts DF Down on the target."
+  },
+  "slow": { "price": "100G", "power": "", "locations": "Asiana", "target": "One player or monster", "effect": "Inflicts SP Down on the target." },
+  "daze": { "price": "200G", "power": "", "locations": "Asiana", "target": "One player or monster", "effect": "Inflicts MG Down on the target." },
+  "down": {
+    "price": "4,000G",
+    "power": "",
+    "locations": "Casino Cave, Lava Cave 3F, Daunting Mountain 1F, Tower of Rabble 2F",
+    "target": "One player or monster",
+    "effect": "Inflicts All Down on the target."
+  },
+  "time out": {
+    "price": "800G",
+    "power": "",
+    "locations": "Hallstatt, Clovis, Lava Cave 3F, Aphrike",
+    "target": "One player",
+    "effect": "Paralyzes the target."
+  },
+  "cobra strike": {
+    "price": "200G",
+    "power": "",
+    "locations": "Asiana, Hallstatt, Lava Cave 3F, Aphrike",
+    "target": "One player or monster",
+    "effect": "Poisons the target."
+  },
+  "cobra storm": {
+    "price": "2800G",
+    "power": "",
+    "locations": "Flinders",
+    "target": "All opposing players on current map",
+    "effect": "Poisons all targets."
+  },
+  "fraidy cat": { "price": "150G", "power": "", "locations": "Asiana", "target": "One player", "effect": "Makes the target Afraid." },
+  "blistered feet": {
+    "price": "1,200G",
+    "power": "",
+    "locations": "Asiana, Hallstatt, Lava Cave 3F, Aphrike, Underground Passage, Flinders",
+    "target": "One player",
+    "effect": "Gives the target a Footsore."
+  },
+  "sleepy time": {
+    "price": "2,000G",
+    "power": "",
+    "locations": "Daunting Mountain 1F, Tower of Rabble 2F",
+    "target": "One player or monster",
+    "effect": "Puts the target to Sleep."
+  },
+  "curse": {
+    "price": "3,000G",
+    "power": "",
+    "locations": "Casino Cave, Clovis, Lava Cave 3F, Daunting Mountain 1F, Underground Passage",
+    "target": "One player or monster",
+    "effect": "Curses the target."
+  },
+  "curse all": {
+    "price": "6,000G",
+    "power": "",
+    "locations": "Tower of Rabble 2F",
+    "target": "All opposing players on current map",
+    "effect": "Curses all targets."
+  },
+  "lock": { "price": "400G", "power": "", "locations": "Hallstatt", "target": "One player", "effect": "Seals the target." },
+  "lockdown": {
+    "price": "3,600G",
+    "power": "",
+    "locations": "Casino Cave, Aphrike, Underground Passage, Flinders",
+    "target": "All opposing players on current map",
+    "effect": "Seals all targets."
+  },
+  "death call": { "price": "18,000G", "power": "", "locations": "None", "target": "One player", "effect": "Dooms the target." },
+  "squall": {
+    "price": "1,500G",
+    "power": "",
+    "locations": "Hallstatt, Aphrike",
+    "target": "One player",
+    "effect": "Teleports the target to a random, accessible town."
+  },
+  "typhoon": {
+    "price": "3,500G",
+    "power": "",
+    "locations": "Tower of Rabble 2F",
+    "target": "All opposing players on current map",
+    "effect": "Teleports all targets to random, accessible towns."
+  },
+  "transfer": {
+    "price": "3,200G",
+    "power": "",
+    "locations": "Casino Cave, Daunting Mountain 1F",
+    "target": "One player",
+    "effect": "Swaps the target and user's locations."
+  },
+  "come here": {
+    "price": "5,800G",
+    "power": "",
+    "locations": "Lava Cave 3F",
+    "target": "All opposing players",
+    "effect": "Teleports all targets to the user's space."
+  },
+  "psychokinesis": {
+    "price": "8,000G",
+    "power": "",
+    "locations": "None",
+    "target": "One player or Roadblock Rock",
+    "effect": "Moves the target to a chosen space."
+  },
+  "conjure": {
+    "price": "2,400G",
+    "power": "",
+    "locations": "Clovis, Lava Cave 3F, Underground Passage, Flinders, Tower of Rabble 2F",
+    "target": "An Empty Space with at least one player",
+    "effect": "Summons a monster to the target space."
+  },
+  "town conjure": {
+    "price": "8,000G",
+    "power": "",
+    "locations": "None",
+    "target": "One liberated town",
+    "effect": "Summons a monster to the target town."
+  },
+  "conjure all": {
+    "price": "80,000G",
+    "power": "",
+    "locations": "None",
+    "target": "One liberated town",
+    "effect": "Summons monsters to all towns on the same continent as the target."
+  },
+  "purse cutter": {
+    "price": "1,500G",
+    "power": "",
+    "locations": "Casino Cave, Clovis, Lava Cave 3F, Underground Passage, Flinders",
+    "target": "One player",
+    "effect": "Destroys a few items or field magic of the target"
+  },
+  "vacuum": {
+    "price": "50,000G",
+    "power": "",
+    "locations": "None",
+    "target": "One player",
+    "effect": "Takes a few of the target's stat points and adds them to the user."
+  },
+  "mix-up": {
+    "price": "68,000G",
+    "power": "",
+    "locations": "None",
+    "target": "All players",
+    "effect": "Randomly swaps locations, inventory, money, or a piece of equipment between all targets."
+  },
+  "mystery": { "price": "40,000G", "power": "", "locations": "Tower of Rabble 2F", "target": "Random", "effect": "Causes a random event to occur." }
+}
 
-offensiveMagics = {}
 
-defensiveMagics = {}
+offensiveMagics = {
+  "scorch": {
+    "price": "2,500G",
+    "power": "1.95",
+    "stores": "Asiana, Hallstatt, Casino Cave",
+    "space": "",
+    "type": "Fire",
+    "effect": "May reduce the opponent's DF by 25%."
+  },
+  "scorcher": {
+    "price": "50,000G",
+    "power": "2.65",
+    "stores": "Clovis, Daunting Mountain 1F, Aphrike",
+    "space": "",
+    "type": "Fire",
+    "effect": "May reduce the opponent's DF by 25%."
+  },
+  "giga blaze": {
+    "price": "210,000G",
+    "power": "3.7",
+    "stores": "Flinders, Tower of Rabble 2F",
+    "space": "",
+    "type": "Fire",
+    "effect": "May reduce the opponent's DF by 25%."
+  },
+  "zap": {
+    "price": "3,750G",
+    "power": "2.25",
+    "stores": "Hallstatt, Casino Cave, Clovis",
+    "space": "",
+    "type": "Lightning",
+    "effect": "May reduce the opponent's MG by 25%."
+  },
+  "zapper": {
+    "price": "68,000G",
+    "power": "3.15",
+    "stores": "Daunting Mountain 1F, Aphrike",
+    "space": "",
+    "type": "Lightning",
+    "effect": "May reduce the opponent's MG by 25%."
+  },
+  "lectro beam": {
+    "price": "268,000G",
+    "power": "4.45",
+    "stores": "Flinders",
+    "space": "",
+    "type": "Lightning",
+    "effect": "May reduce the opponent's MG by 25%."
+  },
+  "chill": {
+    "price": "3,150G",
+    "power": "2.1",
+    "stores": "Hallstatt, Clovis",
+    "space": "",
+    "type": "Ice",
+    "effect": "May reduce the opponent's AT by 25%."
+  },
+  "chiller": {
+    "price": "62,000G",
+    "power": "2.9",
+    "stores": "Daunting Mountain 1F",
+    "space": "",
+    "type": "Ice",
+    "effect": "May reduce the opponent's AT by 25%."
+  },
+  "ice barrage": {
+    "price": "224,000G",
+    "power": "4.1",
+    "stores": "Underground Passage",
+    "space": "",
+    "type": "Ice",
+    "effect": "May reduce the opponent's AT by 25%."
+  },
+  "gust": { "price": "5,000G", "power": "2.45", "stores": "Clovis", "space": "", "type": "Wind", "effect": "May reduce the opponent's SP by 25%." },
+  "guster": {
+    "price": "70,000G",
+    "power": "3.2",
+    "stores": "Daunting Mountain 1F",
+    "space": "",
+    "type": "Wind",
+    "effect": "May reduce the opponent's SP by 25%."
+  },
+  "f5 storm": {
+    "price": "286,000G",
+    "power": "4.75",
+    "stores": "Tower of Rabble 2F",
+    "space": "",
+    "type": "Wind",
+    "effect": "May reduce the opponent's SP by 25%."
+  },
+  "mirror image": {
+    "price": "12,500G",
+    "power": "2.4",
+    "stores": "Casino Cave, Clovis, Lava Cave 3F, Underground Passage",
+    "space": "",
+    "type": "Physical",
+    "effect": ""
+  },
+  "teleport": { "price": "25,000G", "power": "3.0", "stores": "Lava Cave 3F, Aphrike", "space": "", "type": "Physical", "effect": "" },
+  "aurora": {
+    "price": "320,000G",
+    "power": "5.0",
+    "stores": "Tower of Rabble 2F",
+    "space": "",
+    "type": "Light",
+    "effect": "May reduce all the opponent's stats by 50%."
+  },
+  "curse": {
+    "price": "20,000G",
+    "power": "1.6",
+    "stores": "Lava Cave 3F, Underground Passage",
+    "space": "",
+    "type": "Dark",
+    "effect": "Curses the opponent."
+  },
+  "sleepy": { "price": "140,000G", "power": "1.1", "stores": "Flinders", "space": "", "type": "Dark", "effect": "Puts the opponent to Sleep." },
+  "blind": { "price": "15,000G", "power": "1.4", "stores": "Casino Cave", "space": "", "type": "Dark", "effect": "Blinds the opponent." },
+  "banish": {
+    "price": "240,000G",
+    "power": "2.5",
+    "stores": "Aphrike, Flinders",
+    "space": "",
+    "type": "Dark",
+    "effect": "Kills the opponent but leaves the caster at 1 HP."
+  },
+  "drain": {
+    "price": "2,000G",
+    "power": "0",
+    "stores": "Asiana, Hallstatt, Lava Cave 3F, Underground Passage",
+    "space": "",
+    "type": "Drain",
+    "effect": "Steals 50% of the opponent's current HP."
+  },
+  "swap": { "price": "1,500G", "power": "0", "stores": "Asiana", "space": "", "type": "Drain", "effect": "Swaps flat HP with the opponent." },
+  "pickpocket": { "price": "500G", "power": "1.5", "stores": "Asiana", "space": "", "type": "Drain", "effect": "Steals 25% of the opponent's G." },
+  "rust": {
+    "price": "400,000G",
+    "power": "3.6",
+    "stores": "Tower of Rabble 2F",
+    "space": "",
+    "type": "Dark",
+    "effect": "Breaks a random piece of the opponent's equipment."
+  }
+}
+
+
+defensiveMagics = {
+  "m guard": {
+    "price": "500G",
+    "power": "20%",
+    "stores": "Asiana, Hallstatt, Casino Cave, Clovis, Lava Cave 3F, Daunting Mountain 1F",
+    "space": "Prologue",
+    "type": "Protect",
+    "effect": ""
+  },
+  "m guard+": {
+    "price": "50,000G",
+    "power": "60%",
+    "stores": "Lava Cave 3F, Daunting Mountain 1F, Underground Passage",
+    "space": "",
+    "type": "Protect",
+    "effect": ""
+  },
+  "m guard dx": {
+    "price": "95,000G",
+    "power": "90%",
+    "stores": "Aphrike, Underground Passage, Flinders",
+    "space": "Castle in the Clouds",
+    "type": "Protect",
+    "effect": ""
+  },
+  "refresh": {
+    "price": "5,750G",
+    "power": "20%",
+    "stores": "Asiana, Clovis, Lava Cave 3F, Daunting Mountain 1F",
+    "space": "",
+    "type": "Heal",
+    "effect": "Recovers 10% ~ 30% of max HP."
+  },
+  "refresh+": {
+    "price": "40,000G",
+    "power": "35%",
+    "stores": "Daunting Mountain 1F, Aphrike",
+    "space": "",
+    "type": "Heal",
+    "effect": "Recovers 40% ~ 60% of max HP."
+  },
+  "refresh dx": {
+    "price": "80,000G",
+    "power": "50%",
+    "stores": "Flinders, Tower of Rabble 2F",
+    "space": "Castle in the Clouds",
+    "type": "Heal",
+    "effect": "Fully heals the user."
+  },
+  "super cure": {
+    "price": "25,000G",
+    "power": "50%",
+    "stores": "Clovis, Aphrike",
+    "space": "",
+    "type": "Heal",
+    "effect": "Cures all the user's status ailments."
+  },
+  "seal magic": {
+    "price": "20,000G",
+    "power": "30%",
+    "stores": "Casino Cave, Clovis, Lava Cave 3F, Aphrike",
+    "space": "",
+    "type": "Counter",
+    "effect": "Seals the opponent's Offensive Magic."
+  },
+  "seal magic+": {
+    "price": "60,000G",
+    "power": "50%",
+    "stores": "Flinders",
+    "space": "Castle in the Clouds",
+    "type": "Counter",
+    "effect": "Seals the opponent's Offensive Magic and Defensive Magic."
+  },
+  "shock": {
+    "price": "145,000G",
+    "power": "60%",
+    "stores": "Underground Passage",
+    "space": "Castle in the Clouds",
+    "type": "Counter",
+    "effect": "Stuns the opponent."
+  },
+  "mirror": {
+    "price": "150,000G",
+    "power": "50%",
+    "stores": "Flinders",
+    "space": "Castle in the Clouds",
+    "type": "Counter",
+    "effect": "Damages the opponent for half the damage taken. Reflects effect back at opponent."
+  },
+  "mg charge": {
+    "price": "5,000G",
+    "power": "35%",
+    "stores": "Hallstatt, Casino Cave",
+    "space": "",
+    "type": "Assist",
+    "effect": "Raises the user's MG by 50%."
+  },
+  "at charge": {
+    "price": "6,250G",
+    "power": "35%",
+    "stores": "Casino Cave",
+    "space": "",
+    "type": "Assist",
+    "effect": "Raises the user's AT by 50%."
+  },
+  "df charge": {
+    "price": "3,750G",
+    "power": "35%",
+    "stores": "Asiana, Hallstatt",
+    "space": "",
+    "type": "Assist",
+    "effect": "Raises the user's DF by 50%."
+  },
+  "sp charge": {
+    "price": "2,500G",
+    "power": "35%",
+    "stores": "Asiana, Hallstatt",
+    "space": "Prologue",
+    "type": "Assist",
+    "effect": "Raises the user's SP by 50%."
+  },
+  "charge all": {
+    "price": "120,000G",
+    "power": "60%",
+    "stores": "Tower of Rabble 2F",
+    "space": "Castle in the Clouds",
+    "type": "Assist",
+    "effect": "Raises all the user's stats by 50%."
+  },
+  "charm": {
+    "price": "160,000G",
+    "power": "70%",
+    "stores": "Underground Passage, Tower of Rabble 2F",
+    "space": "",
+    "type": "Counter",
+    "effect": "Seals the opponent's Attack and Counter commands."
+  },
+  "bounce": {
+    "price": "360,000G",
+    "power": "0%",
+    "stores": "Tower of Rabble 2F",
+    "space": "Dark Dimension",
+    "type": "Counter",
+    "effect": "Causes the opponent to take the damage and effect instead."
+  },
+  "super bounce": {
+    "price": "2G",
+    "power": "0%",
+    "stores": "",
+    "space": "",
+    "type": "Counter",
+    "effect": "Causes the opponent to take the damage amplified to 400% and effect instead."
+  }
+}

@@ -12,14 +12,14 @@ app.mount("/", StaticFiles(directory="static", html=True), name="static")
 @app_api.get("/{itemName}")
 async def get_item(itemName: str):
     if (itemName in items):
-        return {items[itemName]}
+        return {"data": items[itemName], "name": itemName, "type": 0}
     elif (itemName in weapons):
-        return {weapons[itemName]}
+        return {"data": weapons[itemName], "name": itemName, "type": 1}
     elif (itemName in shields):
-        return {shields[itemName]}
+        return {"data": shields[itemName], "name": itemName, "type": 2}
     elif (itemName in offensiveMagics):
-        return {offensiveMagics[itemName]}
+        return {"data": offensiveMagics[itemName], "name": itemName, "type": 3}
     elif (itemName in defensiveMagics):
-        return {defensiveMagics[itemName]}
+        return {"data": defensiveMagics[itemName], "name": itemName, "type": 4}
     elif (itemName in fieldMagics):
-        return {fieldMagics[itemName]}
+        return {"data": fieldMagics[itemName], "name": itemName, "type": 5}
