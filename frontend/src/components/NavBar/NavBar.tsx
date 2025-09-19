@@ -26,9 +26,9 @@ function NavBar({ current, currentString, onChangeTool }: Props) {
         <button onClick={() => onChangeTool(4, 'monster search')} className={'navButton' + (current == 4 ? ' navSelected' : '')}>
           monster search
         </button>
-        <button onClick={() => onChangeTool(5, 'continent maps')} className={'navButton' + (current == 5 ? ' navSelected' : '')}>
+        {/* <button onClick={() => onChangeTool(5, 'continent maps')} className={'navButton' + (current == 5 ? ' navSelected' : '')}>
           continent maps
-        </button>
+        </button> */}
       </div>
       <h1 className='navCurrent'>{currentString}</h1>
     </div>
