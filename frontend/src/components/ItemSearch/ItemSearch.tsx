@@ -3,7 +3,7 @@ interface Props {
 }
 
 function ItemSearch({ hide }: Props) {
-  return <div>ItemSearch</div>;
+  return <div className={hide ? 'hide' : ''}>ItemSearch</div>;
 }
 
 export default ItemSearch;

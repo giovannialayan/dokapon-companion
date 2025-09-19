@@ -34,3 +34,7 @@ async def get_monster(monsterName: str, response: Response):
     else:
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"error": "monster not found"}
+    
+# @app_api.get("/monsters")
+# async def get_allmonsters():
+#     return monsters

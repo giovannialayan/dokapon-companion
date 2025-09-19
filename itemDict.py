@@ -42,7 +42,7 @@ items = {
     "desc": "Cures you of all Field Status Ailments other than Wanted, including Z-Plague and Doom. Also restores all HP.",
     "sellPrice": "10,000G"
   },
-  "stl-bru": { "name": "Stl-Bru", "desc": "Buffs AT by 25% for about a week.", "sellPrice": "250G" },
+  "stlbru": { "name": "Stl-Bru", "desc": "Buffs AT by 25% for about a week.", "sellPrice": "250G" },
   "phyoose": { "name": "Phyoose", "desc": "Buffs DF by 25% for about a week.", "sellPrice": "250G" },
   "invigorade": { "name": "Invigorade", "desc": "Buffs SP by 25% for about a week.", "sellPrice": "250G" },
   "jesta": { "name": "Jesta", "desc": "Buffs MG by 25% for about a week.", "sellPrice": "250G" },
@@ -325,7 +325,7 @@ weapons = {
     "job": "Magician-based",
     "locations": "Hallstatt (Store)\nClovis (Store)"
   },
-  "smith'shammer": {
+  "smithshammer": {
     "name": "Smith's Hammer",
     "price": "12,000G",
     "at": "45",
@@ -901,7 +901,7 @@ weapons = {
     "job": "Monk",
     "locations": "Arch Demon (5% drop)"
   },
-  "no-recoilcannon": {
+  "norecoilcannon": {
     "name": "No-Recoil Cannon",
     "price": "7,500,000G",
     "at": "205",
@@ -1008,7 +1008,7 @@ shields = {
     "mg": "",
     "sp": "1",
     "hp": "",
-    "effect": "None​",
+    "effect": "",
     "locations": "Asiana (Store)"
   },
   "leathershield": {
@@ -1019,7 +1019,7 @@ shields = {
     "mg": "",
     "sp": "2",
     "hp": "",
-    "effect": "None​",
+    "effect": "",
     "locations": "Asiana (Store)"
   },
   "buckler": {
@@ -1030,7 +1030,7 @@ shields = {
     "mg": "",
     "sp": "2",
     "hp": "",
-    "effect": "None​",
+    "effect": "",
     "locations": "Asiana (Store)"
   },
   "bronzeshield": {
@@ -1371,7 +1371,7 @@ shields = {
     "mg": "",
     "sp": "",
     "hp": "30",
-    "effect": "None​",
+    "effect": "",
     "locations": "Iron Golem"
   },
   "aurashield": {
@@ -1717,7 +1717,7 @@ fieldMagics = {
     "target": "One player",
     "effect": "Takes a few of the target's stat points and adds them to the user."
   },
-  "mix-up": {
+  "mixup": {
     "name": "Mix-Up",
     "price": "68,000G",
     "power": "",
@@ -1964,7 +1964,7 @@ defensiveMagics = {
     "type": "Protect",
     "effect": ""
   },
-  "mguard dx": {
+  "mguarddx": {
     "name": "M Guard Dx",
     "price": "95,000G",
     "power": "90%",
@@ -3296,7 +3296,7 @@ monsters = {
     "aiDefMagic": "45%",
     "aiCounter": "5%"
   },
-  "scorpion-g": {
+  "scorpiong": {
     "name": "Scorpion-G",
     "level": "4",
     "hp": "24",
@@ -3344,7 +3344,7 @@ monsters = {
     "aiDefMagic": "0%",
     "aiCounter": "55%"
   },
-  "spider-g": {
+  "spiderg": {
     "name": "Spider-G",
     "level": "5",
     "hp": "43",
@@ -4616,7 +4616,7 @@ monsters = {
     "aiDefMagic": "45%",
     "aiCounter": "15%"
   },
-  "demon'sguard": {
+  "demonsguard": {
     "name": "Demon's Guard",
     "level": "?",
     "hp": "?",
@@ -4952,7 +4952,7 @@ monsters = {
     "aiDefMagic": "45%",
     "aiCounter": "5%"
   },
-  "ricojr.": {
+  "ricojr": {
     "name": "Rico Jr.",
     "level": "?",
     "hp": "?",
@@ -5000,7 +5000,7 @@ monsters = {
     "aiDefMagic": "45%",
     "aiCounter": "15%"
   },
-  "overlordrico (true form)": {
+  "overlordricotrueform": {
     "name": "Overlord Rico (True Form)",
     "level": "80",
     "hp": "3600",
@@ -5120,7 +5120,7 @@ monsters = {
     "aiDefMagic": "0%",
     "aiCounter": "5%"
   },
-  "robo-sassin": {
+  "robosassin": {
     "name": "Robo-Sassin",
     "level": "?",
     "hp": "?",
