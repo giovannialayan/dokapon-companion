@@ -1,0 +1,46 @@
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchDropdownItem {
+  background-color: #333;
+  padding: 0.2rem;
+}
+
+.searchDropdownItem:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.searchDropdownItem:hover {
+  background-color: #444144;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchDropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.searchButton {
+  padding-left: 0.4rem;
+  height: 32px;
+}
+
+@media (max-width: 576px) {
+  .searchDropdown {
+    width: 60%;
+  }
+}

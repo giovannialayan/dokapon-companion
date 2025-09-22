@@ -119,7 +119,7 @@ items = {
   },
   "fashionmagazines": {
     "name": "Fashion Magazines",
-    "desc": "Fashion Mag #1: Disco. (Kira)\n\nFashion Mag #2: Raiden. (Casino)\n\nFashion Mag #3: Eastern Fashion. (Kira)\n\nFashion Mag #4: Prince/Princess. (Casino)\n\nFashion Mag #5: Cowboy/Kitty. (Casino)\n\nFashion Mag #6: Elephant. (Casino)\n\nFashion Mag #7: Duck. (Kira)\n\nFashion Mag #8: Wabbit. (Wabbit Explosion)",
+    "desc": "Fashion Mag #1: Disco. (Kira),Fashion Mag #2: Raiden. (Casino),Fashion Mag #3: Eastern Fashion. (Kira),Fashion Mag #4: Prince/Princess. (Casino),Fashion Mag #5: Cowboy/Kitty. (Casino),Fashion Mag #6: Elephant. (Casino),Fashion Mag #7: Duck. (Kira),Fashion Mag #8: Wabbit. (Wabbit Explosion)",
     "sellPrice": "50G"
   },
   "losttechnology": {
@@ -263,7 +263,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Asiana (Store)\nHallstatt (Store)"
+    "locations": "Asiana (Store),Hallstatt (Store)"
   },
   "brassknuckle": {
     "name": "Brass Knuckle",
@@ -311,7 +311,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Ninja",
-    "locations": "Hallstatt (Store)\nClovis (Store)"
+    "locations": "Hallstatt (Store),Clovis (Store)"
   },
   "mace": {
     "name": "Mace",
@@ -323,7 +323,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Magician-based",
-    "locations": "Hallstatt (Store)\nClovis (Store)"
+    "locations": "Hallstatt (Store),Clovis (Store)"
   },
   "smithshammer": {
     "name": "Smith's Hammer",
@@ -335,7 +335,7 @@ weapons = {
     "hp": "10",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Hallstatt (Store)\nClovis (Store)\nLava Cave 3F (Store)"
+    "locations": "Hallstatt (Store),Clovis (Store),Lava Cave 3F (Store)"
   },
   "sleepbow": {
     "name": "Sleep Bow",
@@ -359,7 +359,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Warrior-based",
-    "locations": "Clovis (Store)\nLava Cave 3F (Store)"
+    "locations": "Clovis (Store),Lava Cave 3F (Store)"
   },
   "crimsonwand": {
     "name": "Crimson Wand",
@@ -371,7 +371,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Magician-based",
-    "locations": "Clovis (Store)\nLava Cave 3F (Store)"
+    "locations": "Clovis (Store),Lava Cave 3F (Store)"
   },
   "trident": {
     "name": "Trident",
@@ -383,7 +383,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Warrior-based",
-    "locations": "Clovis (Store)\nLava Cave 3F (Store)"
+    "locations": "Clovis (Store),Lava Cave 3F (Store)"
   },
   "battlefist": {
     "name": "Battlefist",
@@ -395,7 +395,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Monk",
-    "locations": "Lava Cave 3F (Store)\nLlano (Store)"
+    "locations": "Lava Cave 3F (Store),Llano (Store)"
   },
   "dreamrod": {
     "name": "Dream Rod",
@@ -419,7 +419,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Acrobat",
-    "locations": "Lava Cave 3F (Store)\nLlano (Store)"
+    "locations": "Lava Cave 3F (Store),Llano (Store)"
   },
   "scimitar": {
     "name": "Scimitar",
@@ -467,7 +467,7 @@ weapons = {
     "hp": "",
     "effect": "May cast Zapper, dealing moderate additional Lightning damage to the opponent.",
     "job": "Warrior-based",
-    "locations": "Llano (Store)\nDaunting Mountain 3F (Store)"
+    "locations": "Llano (Store),Daunting Mountain 3F (Store)"
   },
   "poisonfist": {
     "name": "Poison Fist",
@@ -491,7 +491,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Warrior-based",
-    "locations": "Llano (Store)\nDaunting Mountain 3F (Store)"
+    "locations": "Llano (Store),Daunting Mountain 3F (Store)"
   },
   "ichimonjikatana": {
     "name": "Ichimonji Katana",
@@ -539,7 +539,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Daunting Mountain 3F (Store)\nAphrike (Store)"
+    "locations": "Daunting Mountain 3F (Store),Aphrike (Store)"
   },
   "cybersaber": {
     "name": "Cyber Saber",
@@ -551,7 +551,7 @@ weapons = {
     "hp": "10",
     "effect": "None",
     "job": "Robo Knight",
-    "locations": "Daunting Mountain 3F (Store)\nAphrike (Store)"
+    "locations": "Daunting Mountain 3F (Store),Aphrike (Store)"
   },
   "estoc": {
     "name": "Estoc",
@@ -623,7 +623,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Acrobat",
-    "locations": "Aphrike (Store)\nUnderground Passage (Store)"
+    "locations": "Aphrike (Store),Underground Passage (Store)"
   },
   "thunderaxe": {
     "name": "Thunder Axe",
@@ -647,7 +647,7 @@ weapons = {
     "hp": "30",
     "effect": "None",
     "job": "Monk",
-    "locations": "Aphrike (Store)\nUnderground Passage (Store)"
+    "locations": "Aphrike (Store),Underground Passage (Store)"
   },
   "exorcismspear": {
     "name": "Exorcism Spear",
@@ -659,7 +659,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Dokapon Cards ( A Cards )\nPyramid White Loot Space"
+    "locations": "Dokapon Cards ( A Cards ),Pyramid White Loot Space"
   },
   "shamshir": {
     "name": "Shamshir",
@@ -719,7 +719,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Underground Passage (Store)\nFlinders (Store)"
+    "locations": "Underground Passage (Store),Flinders (Store)"
   },
   "combatknife": {
     "name": "Combat Knife",
@@ -731,7 +731,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Thief",
-    "locations": "Underground Passage (Store)\nFlinders (Store)"
+    "locations": "Underground Passage (Store),Flinders (Store)"
   },
   "greatsword": {
     "name": "Greatsword",
@@ -767,7 +767,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Warrior-based",
-    "locations": "Flinders (Store)\nTower of Rabble 3F (Store)"
+    "locations": "Flinders (Store),Tower of Rabble 3F (Store)"
   },
   "halberd": {
     "name": "Halberd",
@@ -779,7 +779,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Cleric",
-    "locations": "Flinders (Store)\nTower of Rabble 3F (Store)"
+    "locations": "Flinders (Store),Tower of Rabble 3F (Store)"
   },
   "deadlydagger": {
     "name": "Deadly Dagger",
@@ -839,7 +839,7 @@ weapons = {
     "hp": "",
     "effect": "None",
     "job": "Warrior-based",
-    "locations": "Tower of Rabble 3F (Store)\nGutz The Blacksmith"
+    "locations": "Tower of Rabble 3F (Store),Gutz The Blacksmith"
   },
   "darksword": {
     "name": "Dark Sword",
@@ -887,7 +887,7 @@ weapons = {
     "hp": "",
     "effect": "May Blind the opponent.",
     "job": "Magician-based",
-    "locations": "Lich (5% Drop)\nFlinders (Red Loot Space)"
+    "locations": "Lich (5% Drop),Flinders (Red Loot Space)"
   },
   "divinefist": {
     "name": "Divine Fist",
@@ -1042,7 +1042,7 @@ shields = {
     "sp": "-1",
     "hp": "",
     "effect": "",
-    "locations": "Asiana (Store)\nHallstatt (Store)"
+    "locations": "Asiana (Store),Hallstatt (Store)"
   },
   "leadshield": {
     "name": "Lead Shield",
@@ -1053,7 +1053,7 @@ shields = {
     "sp": "-3",
     "hp": "",
     "effect": "",
-    "locations": "Hallstatt (Store)\nClovis (Store)"
+    "locations": "Hallstatt (Store),Clovis (Store)"
   },
   "wabbitshield": {
     "name": "Wabbit Shield",
@@ -1064,7 +1064,7 @@ shields = {
     "sp": "20",
     "hp": "200",
     "effect": "",
-    "locations": "Wabbit\nCastle in the Clouds (Shield Space)"
+    "locations": "Wabbit,Castle in the Clouds (Shield Space)"
   },
   "scaleshield": {
     "name": "Scale Shield",
@@ -1075,7 +1075,7 @@ shields = {
     "sp": "2",
     "hp": "",
     "effect": "",
-    "locations": "Hallstatt (Store)\nClovis (Store)\nAsiana (Red Loot Space)"
+    "locations": "Hallstatt (Store),Clovis (Store),Asiana (Red Loot Space)"
   },
   "coppershield": {
     "name": "Copper Shield",
@@ -1086,7 +1086,7 @@ shields = {
     "sp": "-2",
     "hp": "",
     "effect": "",
-    "locations": "Clovis (Store)\nLava Cave 3F (Store)\nHallstatt (Red Loot Space)"
+    "locations": "Clovis (Store),Lava Cave 3F (Store),Hallstatt (Red Loot Space)"
   },
   "soldiershield": {
     "name": "Soldier Shield",
@@ -1108,7 +1108,7 @@ shields = {
     "sp": "5",
     "hp": "",
     "effect": "",
-    "locations": "Lava Cave 3F (Store)\nLlano (Store)"
+    "locations": "Lava Cave 3F (Store),Llano (Store)"
   },
   "ironshield": {
     "name": "Iron Shield",
@@ -1119,7 +1119,7 @@ shields = {
     "sp": "-3",
     "hp": "10",
     "effect": "",
-    "locations": "Llano (Store)\nClovis (Red Loot Space)"
+    "locations": "Llano (Store),Clovis (Red Loot Space)"
   },
   "shinobishield": {
     "name": "Shinobi Shield",
@@ -1141,7 +1141,7 @@ shields = {
     "sp": "-6",
     "hp": "",
     "effect": "",
-    "locations": "Llano (Store)\nDaunting Mountain 3F (Store)"
+    "locations": "Llano (Store),Daunting Mountain 3F (Store)"
   },
   "steelshield": {
     "name": "Steel Shield",
@@ -1174,7 +1174,7 @@ shields = {
     "sp": "",
     "hp": "20",
     "effect": "",
-    "locations": "Daunting Mountain 3F (Store)\nAphrike (Store)"
+    "locations": "Daunting Mountain 3F (Store),Aphrike (Store)"
   },
   "blackshield": {
     "name": "Black Shield",
@@ -1185,7 +1185,7 @@ shields = {
     "sp": "-3",
     "hp": "",
     "effect": "",
-    "locations": "Gutz the Blacksmith\nBone Knight"
+    "locations": "Gutz the Blacksmith,Bone Knight"
   },
   "paladinshield": {
     "name": "Paladin Shield",
@@ -1196,7 +1196,7 @@ shields = {
     "sp": "-4",
     "hp": "",
     "effect": "",
-    "locations": "Dark Knight\nCastle in the Clouds (Shield Space)"
+    "locations": "Dark Knight,Castle in the Clouds (Shield Space)"
   },
   "silvershield": {
     "name": "Silver Shield",
@@ -1207,7 +1207,7 @@ shields = {
     "sp": "",
     "hp": "",
     "effect": "",
-    "locations": "Aphrike (Store)\nLlano (Red Loot Space)"
+    "locations": "Aphrike (Store),Llano (Red Loot Space)"
   },
   "mirrorshield": {
     "name": "Mirror Shield",
@@ -1229,7 +1229,7 @@ shields = {
     "sp": "",
     "hp": "",
     "effect": "May interrupt the opponent's attack with its own attack.",
-    "locations": "Gunnbjorn (Red Loot Space)\n\nGutz the Blacksmith"
+    "locations": "Gunnbjorn (Red Loot Space),Gutz the Blacksmith"
   },
   "shellshield": {
     "name": "Shell Shield",
@@ -1240,7 +1240,7 @@ shields = {
     "sp": "-1",
     "hp": "",
     "effect": "",
-    "locations": "Aphrike (Store)\nUnderground Passage (Store)"
+    "locations": "Aphrike (Store),Underground Passage (Store)"
   },
   "goldenshield": {
     "name": "Golden Shield",
@@ -1262,7 +1262,7 @@ shields = {
     "sp": "",
     "hp": "50",
     "effect": "",
-    "locations": "Casino Cave (Casino)\nDaunting Mountain (Red Loot Space)\n\nGutz the Blacksmith"
+    "locations": "Casino Cave (Casino),Daunting Mountain (Red Loot Space),Gutz the Blacksmith"
   },
   "ragnarokshield": {
     "name": "Ragnarok Shield",
@@ -1273,7 +1273,7 @@ shields = {
     "sp": "",
     "hp": "",
     "effect": "",
-    "locations": "Underground Passage (Store)\nFlinders (Store)"
+    "locations": "Underground Passage (Store),Flinders (Store)"
   },
   "moonshield": {
     "name": "Moon Shield",
@@ -1295,7 +1295,7 @@ shields = {
     "sp": "-6",
     "hp": "",
     "effect": "",
-    "locations": "Casino Cave (Casino)\n\nUnderground Passage (Store)\nFlinders (Store)"
+    "locations": "Casino Cave (Casino),Underground Passage (Store),Flinders (Store)"
   },
   "girlyshield": {
     "name": "Girly Shield",
@@ -1306,7 +1306,7 @@ shields = {
     "sp": "",
     "hp": "20",
     "effect": "",
-    "locations": "Succubus\nCasino Cave (Casino)"
+    "locations": "Succubus,Casino Cave (Casino)"
   },
   "duralshield": {
     "name": "Dural Shield",
@@ -1317,7 +1317,7 @@ shields = {
     "sp": "-3",
     "hp": "",
     "effect": "",
-    "locations": "Flinders (Store)\nTower of Rabble 3F (Store)\nAphrike (Red Loot Space)"
+    "locations": "Flinders (Store),Tower of Rabble 3F (Store),Aphrike (Red Loot Space)"
   },
   "metalguard": {
     "name": "Metal Guard",
@@ -1328,7 +1328,7 @@ shields = {
     "sp": "3",
     "hp": "",
     "effect": "May reflect the opponent's attack.",
-    "locations": "Golem\nGutz the Blacksmith\nUnderground Passage (Red Loot Space)"
+    "locations": "Golem,Gutz the Blacksmith,Underground Passage (Red Loot Space)"
   },
   "sunshield": {
     "name": "Sun Shield",
@@ -1339,7 +1339,7 @@ shields = {
     "sp": "",
     "hp": "40",
     "effect": "May fully heal the user when defending.",
-    "locations": "Tower of Rabble 3F (Locked Box)\n\nGutz the Blacksmith"
+    "locations": "Tower of Rabble 3F (Locked Box),Gutz the Blacksmith"
   },
   "cursedshield": {
     "name": "Cursed Shield",
@@ -1350,7 +1350,7 @@ shields = {
     "sp": "5",
     "hp": "",
     "effect": "May inflict additional damage to the user equal to 10% of users max HP when defending.",
-    "locations": "Underground Passage (Red Loot Space)\nTower of Rabble (Locked Box)\nGutz the Blacksmith"
+    "locations": "Underground Passage (Red Loot Space),Tower of Rabble (Locked Box),Gutz the Blacksmith"
   },
   "heroshield": {
     "name": "Hero Shield",
@@ -1394,7 +1394,7 @@ shields = {
     "sp": "",
     "hp": "",
     "effect": "",
-    "locations": "Underworld (Locked Box)\n\nFlinders (Red Loot Space)"
+    "locations": "Underworld (Locked Box),Flinders (Red Loot Space)"
   },
   "dragonshield": {
     "name": "Dragon Shield",
@@ -1405,7 +1405,7 @@ shields = {
     "sp": "3",
     "hp": "30",
     "effect": "",
-    "locations": "Tiamat\nFlinders (Red Loot Space)"
+    "locations": "Tiamat,Flinders (Red Loot Space)"
   },
   "darkshield": {
     "name": "Dark Shield",
@@ -1427,7 +1427,7 @@ shields = {
     "sp": "1",
     "hp": "100",
     "effect": "May reduce the opponent's Attack or Strike damage by half.",
-    "locations": "Dark Dimension (Locked Box) Final Dungeon\nCasino Cave (Casino)"
+    "locations": "Dark Dimension (Locked Box) Final Dungeon,Casino Cave (Casino)"
   },
   "demonshield": {
     "name": "Demon Shield",

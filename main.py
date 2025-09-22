@@ -30,7 +30,7 @@ async def get_item(itemName: str, response: Response):
 @app_api.get("/monster/{monsterName}")
 async def get_monster(monsterName: str, response: Response):
     if (monsterName in monsters):
-        return {"data": monsters[monsters]}
+        return monsters[monsterName]
     else:
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"error": "monster not found"}
