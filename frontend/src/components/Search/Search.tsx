@@ -65,17 +65,27 @@ function Search({ searchText, setSearchText, dataList, dataDisplayList, searchCa
           }}
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
+              setSearchResults([]);
               searchCallback(searchText);
             }
           }}
         ></input>
-        <div className='searchButton' onClick={() => searchCallback(searchText)}>
-          <svg xmlns='http://www.w3.org/2000/svg' width={32} height={32} viewBox='0 0 32 32' fill='#fff'>
-            <circle cx='14' cy='14' r='9' stroke='#fff' stroke-width={3} fill='none'></circle>
-            <path d='M20.5 20.5 L26 26' fill='#fff' stroke='#fff' strokeWidth={3}></path>
-            <circle cx='26' cy='26' r='1.5' fill='#fff'></circle>
-          </svg>
-        </div>
+        <svg
+          onClick={() => {
+            setSearchResults([]);
+            searchCallback(searchText);
+          }}
+          className='searchIcon'
+          xmlns='http://www.w3.org/2000/svg'
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='#fff'
+        >
+          <circle cx='14' cy='14' r='9' stroke='#fff' stroke-width={3} fill='none'></circle>
+          <path d='M20.5 20.5 L26 26' fill='#fff' stroke='#fff' strokeWidth={3}></path>
+          <circle cx='26' cy='26' r='1.5' fill='#fff'></circle>
+        </svg>
       </div>
 
       <ul className='searchDropdown'>

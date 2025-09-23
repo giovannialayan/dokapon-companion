@@ -12,17 +12,17 @@ app.mount("/", StaticFiles(directory="static", html=True), name="static")
 @app_api.get("/item/{itemName}")
 async def get_item(itemName: str, response: Response):
     if (itemName in items):
-        return {"data": items[itemName], "type": 0}
+        return items[itemName]
     elif (itemName in weapons):
-        return {"data": weapons[itemName], "type": 1}
+        return weapons[itemName]
     elif (itemName in shields):
-        return {"data": shields[itemName], "type": 2}
+        return shields[itemName]
     elif (itemName in offensiveMagics):
-        return {"data": offensiveMagics[itemName], "type": 3}
+        return offensiveMagics[itemName]
     elif (itemName in defensiveMagics):
-        return {"data": defensiveMagics[itemName], "type": 4}
+        return defensiveMagics[itemName]
     elif (itemName in fieldMagics):
-        return {"data": fieldMagics[itemName], "type": 5}
+        return fieldMagics[itemName]
     else:
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"error": "item not found"}
@@ -34,7 +34,3 @@ async def get_monster(monsterName: str, response: Response):
     else:
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"error": "monster not found"}
-    
-# @app_api.get("/monsters")
-# async def get_allmonsters():
-#     return monsters

@@ -36,7 +36,21 @@ ul {
 
 .searchButton {
   padding-left: 0.4rem;
-  height: 32px;
+}
+
+.searchIcon {
+  padding-left: 0.4rem;
+  border: 2px solid #111;
+  border-radius: 25%;
+}
+
+.searchIcon:hover {
+  border-color: #ddd;
+}
+
+.searchIcon:active {
+  border-color: #fff;
+  background-color: #333;
 }
 
 @media (max-width: 576px) {
