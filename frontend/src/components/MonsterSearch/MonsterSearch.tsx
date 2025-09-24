@@ -47,7 +47,7 @@ function MonsterSearch({ hide }: Props) {
     }
 
     const modifiedSearch = searchInput
-      .replace(/ .-'()/g, '')
+      .replace(/[ .\-'()]/g, '')
       .replace('plus', '+')
       .toLowerCase();
     let firstSearchResult = '';
@@ -67,7 +67,11 @@ function MonsterSearch({ hide }: Props) {
 
     setSearchText(displaySearchResult);
 
-    const res = await fetch('/tool/monster/' + firstSearchResult);
+    if (displaySearchResult == monsterName) {
+      return;
+    }
+
+    const res = await fetch('/dokaponcompanion/monster/' + firstSearchResult);
 
     if (res.ok) {
       const newMonster = await res.json();

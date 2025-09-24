@@ -9,9 +9,9 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/dokacom-[hash].js',
-        chunkFileNames: 'assets/dokacom-[hash].js',
-        assetFileNames: 'assets/dokacom-[hash][extname]',
+        entryFileNames: 'assets/dokacom.js',
+        chunkFileNames: 'assets/dokacom.js',
+        assetFileNames: 'assets/dokacom[extname]',
       },
     },
   },

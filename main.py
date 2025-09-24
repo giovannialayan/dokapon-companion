@@ -5,7 +5,7 @@ from itemDict import items, weapons, shields, fieldMagics, offensiveMagics, defe
 app = FastAPI(title="page")
 app_api = FastAPI(title="api")
 
-app.mount("/tool", app_api)
+app.mount("/dokaponcompanion", app_api)
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
 

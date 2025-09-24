@@ -11,12 +11,13 @@ interface Props {
 
 function Search({ searchText, setSearchText, dataList, dataDisplayList, searchCallback }: Props) {
   const [searchResults, setSearchResults] = useState([] as string[]);
+  const [topResult, setTopResult] = useState('');
 
   const updateSearch = (search: string) => {
     setSearchText(search);
 
     const modifiedSearch = search
-      .replace(/ .-'()/g, '')
+      .replace(/[ .\-'()]/g, '')
       .replace('plus', '+')
       .toLowerCase();
     let newSearchResults = [];
@@ -49,6 +50,12 @@ function Search({ searchText, setSearchText, dataList, dataDisplayList, searchCa
       for (let i = 0; i < maxResults; i++) {
         newSearchResults.push(newSearchPoints[i].name);
       }
+
+      if (newSearchResults.length > 0) {
+        setTopResult(newSearchResults[0]);
+      } else {
+        setTopResult(search);
+      }
     }
 
     setSearchResults(newSearchResults);
@@ -66,14 +73,16 @@ function Search({ searchText, setSearchText, dataList, dataDisplayList, searchCa
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               setSearchResults([]);
-              searchCallback(searchText);
+              searchCallback(topResult);
+              setTopResult('');
             }
           }}
         ></input>
         <svg
           onClick={() => {
             setSearchResults([]);
-            searchCallback(searchText);
+            searchCallback(topResult);
+            setTopResult('');
           }}
           className='searchIcon'
           xmlns='http://www.w3.org/2000/svg'
@@ -96,7 +105,7 @@ function Search({ searchText, setSearchText, dataList, dataDisplayList, searchCa
               onClick={() => {
                 setSearchText(result);
                 setSearchResults([]);
-                searchCallback(searchText);
+                searchCallback(result);
               }}
             >
               {result}

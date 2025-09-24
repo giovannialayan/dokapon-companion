@@ -41,7 +41,7 @@ function ItemSearch({ hide }: Props) {
     }
 
     const modifiedSearch = searchInput
-      .replace(/ .-'()/g, '')
+      .replace(/[ .\-'()]/g, '')
       .replace('plus', '+')
       .toLowerCase();
     let firstSearchResult = '';
@@ -61,7 +61,11 @@ function ItemSearch({ hide }: Props) {
 
     setSearchText(displaySearchResult);
 
-    const res = await fetch('/tool/item/' + firstSearchResult);
+    if (displaySearchResult == itemName) {
+      return;
+    }
+
+    const res = await fetch('/dokaponcompanion/item/' + firstSearchResult);
 
     if (res.ok) {
       const newItem = await res.json();
